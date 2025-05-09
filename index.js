@@ -20,7 +20,7 @@ const app = express();
 // 1) CORS (including OPTIONS for preflight)
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
@@ -56,7 +56,7 @@ app.use((req, res, next) => {
 
 // 6) Health check
 app.get("/", (req, res) => {
-  res.send("Hello Jee");
+  res.send("Ahsan Insta BackEnd is running");
 });
 
 // 7) API routes
